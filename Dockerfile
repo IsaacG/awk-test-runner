@@ -1,9 +1,9 @@
-FROM ubuntu:24.04@sha256:c4a8d5503dfb2a3eb8ab5f807da5bc69a85730fb49b5cfca2330194ebcc41c7b
+FROM ubuntu:26.04@sha256:f3d28607ddd78734bb7f71f117f3c6706c666b8b76cbff7c9ff6e5718d46ff64
 
-# Ubuntu 24.04 'noble numbat' gets us:
-# gawk v5.2.1           https://launchpad.net/ubuntu/noble/+source/gawk
-# jq   v1.7.1           https://launchpad.net/ubuntu/noble/+source/jq
-# bats v1.10.0          https://launchpad.net/ubuntu/noble/+source/bats
+# GNU Awk 5.3.2, API 4.0, PMA Avon 8-g1, (GNU MPFR 4.2.2, GNU MP 6.3.0)
+# Bats 1.13.0
+# GNU bash, version 5.3.9(1)-release (x86_64-pc-linux-gnu)
+# jq-1.8.1
 
 RUN apt-get update                                                              && \
     apt-get install --assume-yes --no-install-recommends gawk jq bats locales   && \
